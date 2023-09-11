@@ -1,7 +1,7 @@
 <?php
 
 class Conexion {
-    private $servername = "localhost"; // Cambia esto al servidor de tu base de datos
+    private $servername = "localhost";  // Cambia esto al servidor de tu base de datos
     private $username = "root";
     private $password = "";
     private $database = "pruebas";
