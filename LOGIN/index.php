@@ -11,7 +11,9 @@ if(isset($_SESSION['login']) && isset($_GET['login']) && $_GET['login'] == 0){
 
     session_destroy();
 }
-
+if(isset($_GET['mensaje']) && isset($_GET['mensaje']) != ''){
+    echo $_GET['mensaje'];
+}
 if(isset($_SESSION['login']) && $_SESSION['login'] == 1){
     $userController->principal();
 }elseif (isset($_POST['registrar']) && $_POST['registrar']== 1){

@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        form{
+            width: 300px;
+            margin: auto;
+            background-color: #FFC;
+            border: 2px solid #F00;
+            padding: 5px
+        }
+
+        input[type="submit"]{
+            display: block;
+            margin: 0 auto; /* Esto centra horizontalmente el botón */
+        }
+    </style>
 </head>
 <body>
     <h1>Registro de Usuario</h1>

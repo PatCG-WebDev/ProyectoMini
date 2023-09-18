@@ -32,7 +32,6 @@ class Usuario {
 
 
     public function insertUser($nuevoUsuario, $nuevoNombre, $nuevoApellido, $nuevaPassword, $nuevoEmail) {
-        echo "entra";
         // Escapar y sanitizar las entradas del usuario para evitar inyección SQL
         $nuevoUsuario = addslashes($nuevoUsuario);
         $nuevoNombre = addslashes($nuevoNombre);
@@ -54,6 +53,7 @@ class Usuario {
             $sql = "INSERT INTO usuarios_pass (usuario, nombre, apellido, password, email) VALUES ('$nuevoUsuario', '$nuevoNombre', '$nuevoApellido', '$nuevaPassword', '$nuevoEmail')";
             $this->conexion->getConnection()->exec($sql);
             return true;
+            
         }
             
 

@@ -35,8 +35,6 @@ class UserController {
         // Aquí puedes agregar la lógica para mostrar el formulario de registro.
         // Por ejemplo, podrías incluir la vista de registro.
 
-        echo "<pre>";
-        var_dump($_POST);
         if (isset($_POST['usuario']) && $_POST['usuario'] != '') {
             // Procesar el registro de un nuevo usuario
             $usuario = new Usuario();
@@ -58,13 +56,14 @@ class UserController {
             $nuevoEmail = isset($_POST['email']) ? $_POST['email'] : ''; */
         
             $registro = $usuario->insertUser($nuevoUsuario, $nuevoNombre, $nuevoApellido, $nuevaPassword, $nuevoEmail);
-        
             if ($registro) {
                 // Redirigir al usuario a la página de inicio después del registro
-                header("Location: index.php");
+                $mensaje= 'Usuario registrado correctamente!';
+                header("Location: index.php?mensaje=$mensaje");
+
             } else {
                 // Mostrar un mensaje de error al usuario
-                echo "Error al registrar el usuario. Por favor, intente nuevamente.";
+                echo "Error al registrar el usuario. Nombre de usuario ya registrado.";
             }
         }
         include('views/formularioRegistro.php');

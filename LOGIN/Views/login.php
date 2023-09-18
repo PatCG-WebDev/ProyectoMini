@@ -10,6 +10,24 @@ require_once(__DIR__ . '/../Configs/params.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        form{
+            width: 300px;
+            margin: auto;
+            background-color: #FFC;
+            border: 2px solid #F00;
+            padding: 5px
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        input[type="submit"]{
+            display: block;
+            margin: 0 auto; /* Esto centra horizontalmente el botón */
+        }
+    </style>
 </head>
 
 <?php
