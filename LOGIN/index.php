@@ -20,5 +20,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 1){
     $userController->guardarUsuario();
 }else{
     $userController->login();
+
+    
 }
 ?>
